@@ -6,6 +6,7 @@ Web frontend Nextcloud server for Neuro Bioinfo Core object storage. This Git re
 the actual server lives on the Digital Alliance's Arbutus cloud.
 - [Documentation](https://neurobioinfo.github.io/Neuro_Bioinfo_Core.Nextcloud/site/)
 - [Nextcloud server](https://neurobioinfo.github.io/Neuro_Bioinfo_Core.Nextcloud)
+
 ## Neuro_Bioinfo_Core data storage platform
 As part of the NeuroVIP project, the Neuro Bioinfo Core group is offering a platform for all Neuro PIs who wish to store their data.  
 &nbsp;  
@@ -17,11 +18,7 @@ This storage platform is intended for:
 * All types of data, **excluding the fundamental MRI/PET imaging that is routinely stored on the Neuro BIC server**
 
 ## Front end: Nextcloud server
-We have mounted a Nextcloud server as the portal for Neuro PIs to manage their data. Nextcloud is an open-source data sharing platform similar to Dropbox.
-
-Click here to access the [Neuro_Bioinfo_Core Nextcloud server](https://neurobioinfo.github.io/Neuro_Bioinfo_Core.Nextcloud)
-
-See the [official Nextcloud documentation](https://docs.nextcloud.com/server/latest/user_manual/en/webinterface.html) for general instructions on how to use the Nextcloud web interface.  
+We have mounted a Nextcloud server as the portal for Neuro PIs to manage their data. Nextcloud is an open-source data sharing platform similar to Dropbox. Click here to access the [Neuro_Bioinfo_Core Nextcloud server](https://neurobioinfo.github.io/Neuro_Bioinfo_Core.Nextcloud). See the [official Nextcloud documentation](https://docs.nextcloud.com/server/latest/user_manual/en/webinterface.html) for general instructions on how to use the Nextcloud web interface.  
 
 **Note: we have not implemented all features from the above link. For example, we do not support using Nextcloud as an email client, nor do we support multi-factor authentication at this time.**
 
