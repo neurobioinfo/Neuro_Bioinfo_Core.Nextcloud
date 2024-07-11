@@ -2,10 +2,10 @@
 
 
 # Welcome to the Neuro_Bioinfo_Core Nextcloud!
-Web frontend Nextcloud server for Neuro Bioinfo Core object storage. 
-
-Note that this git repo is just a redirection address plus some documentation; the actual server lives on the Digital Alliance's Arbutus cloud.
-
+Web frontend Nextcloud server for Neuro Bioinfo Core object storage. This Git repo is just a redirection address plus some documentation; 
+the actual server lives on the Digital Alliance's Arbutus cloud.
+- [Documentation](https://neurobioinfo.github.io/Neuro_Bioinfo_Core.Nextcloud/site/)
+- [Nextcloud server](https://neurobioinfo.github.io/Neuro_Bioinfo_Core.Nextcloud)
 ## Neuro_Bioinfo_Core data storage platform
 As part of the NeuroVIP project, the Neuro Bioinfo Core group is offering a platform for all Neuro PIs who wish to store their data.  
 &nbsp;  
