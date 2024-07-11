@@ -1,4 +1,4 @@
-[![Documentation](https://img.shields.io/badge/Documentation-scrnabox-blue)](https://neurobioinfo.github.io/Neuro_Bioinfo_Core.Nextcloud/site/)[![NeuroVIP](https://img.shields.io/badge/Container-singularity-blue)](https://cloud.sylabs.io/library/saeidamiri1/mni/scrnabox.sif) 
+[![Documentation](https://img.shields.io/badge/Documentation-NeuroVIP-blue)](https://neurobioinfo.github.io/Neuro_Bioinfo_Core.Nextcloud/site/)[![NeuroVIP](https://img.shields.io/badge/Server-NeuroVIP-blue)](https://cloud.sylabs.io/library/saeidamiri1/mni/scrnabox.sif) 
 
 # Neuro_Bioinfo_Core Nextcloud
 Web frontend Nextcloud server for Neuro Bioinfo Core object storage
