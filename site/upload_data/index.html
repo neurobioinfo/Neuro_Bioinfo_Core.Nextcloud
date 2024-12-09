@@ -120,15 +120,14 @@
 </blockquote>
 </blockquote>
 </li>
-<li>you MUST set your linux permissions so the "other" user can read all files, and read + execute all folders you wish to upload. i.e. in your upload folder, run the following commands:<blockquote>
-<blockquote>
-<p>find -type f -exec chmod o+r \{\} \;
-find -type d -exec chmod o+rx \{\} \;</p>
-</blockquote>
-</blockquote>
-</li>
-<li>don't worry, once they are on nextcloud, these permissions will no longer apply; it's just to manage the upload</li>
+<li>you MUST set your linux permissions so the "other" user can read all files, and read + execute all folders you wish to upload. i.e. in your upload folder, run the following commands:</li>
 </ol>
+<pre><code>find -type f -exec chmod o+r {} \;
+find -type d -exec chmod o+rx {} \;
+</code></pre>
+<ul>
+<li>don't worry, once they are on nextcloud, these permissions will no longer apply; it's just to manage the upload</li>
+</ul>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong><strong>Wait at least 6 hours before going to the next step. The data has to migrate behind the scenes</strong></strong></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong><strong>If you want to move in more than 5TB of data at a time, please contact neurobioinfo@mcgill.ca to co-ordinate before you begin</strong></strong></p>
 <ol>

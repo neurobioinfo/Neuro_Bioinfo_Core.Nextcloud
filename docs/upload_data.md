@@ -21,8 +21,10 @@ This option is most appropriate for larger datasets, in particular those which a
 > Connect to beluga by your preferred method (filezilla, globus, terminal command-line, etc.)
 > > If a folder for your group doesn't already exist, please ask the Neuro Bioinfo Core to create it for you
 * you MUST set your linux permissions so the "other" user can read all files, and read + execute all folders you wish to upload. i.e. in your upload folder, run the following commands:
-> > find -type f -exec chmod o+r \\{\\} \\;
-> > find -type d -exec chmod o+rx \\{\\} \\;
+```
+find -type f -exec chmod o+r {} \;
+find -type d -exec chmod o+rx {} \;
+```
 * don't worry, once they are on nextcloud, these permissions will no longer apply; it's just to manage the upload
 
 &nbsp;&nbsp;&nbsp;&nbsp;**__Wait at least 6 hours before going to the next step. The data has to migrate behind the scenes__**
