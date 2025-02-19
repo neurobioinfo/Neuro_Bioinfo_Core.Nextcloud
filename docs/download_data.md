@@ -17,11 +17,10 @@ Enter name for new remote --> neurovip
 
 Type of storage to configure --> <number> / WebDAV
 
-URL of http host to connect to --> https://206-12-88-239.cloud.computecanada.ca/nextcloud/remote.php/dav/files/<your NeuroVIP username>
-
+URL of http host to connect to --> https://206-12-88-239.cloud.computecanada.ca/nextcloud/remote.php/dav/files/"<your NeuroVIP username>"
 Name of the WebDAV site/service/software you are using --> <number> / Nextcloud
 
-User name --> <your NeuroVIP username>
+User name --> "<your NeuroVIP username>"
 
 chose "y" to enter password
 
@@ -37,8 +36,8 @@ choose "q" to quit config
 
 
 ## 3. Go to your download folder and create a folder that will receive the data:
-cd <download folder>
-mkdir <destination folder>
+cd "<download folder>"
+mkdir "<destination folder>"
 
 ## 4. Run next comant to begin downloading
 rclone copy nextcloud:remote/path/file .
