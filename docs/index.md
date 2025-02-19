@@ -34,3 +34,4 @@ Please direct any questions, comments or general support requests to neurobioinf
 - [Upload data](upload_data.md)
 - [Redundant Backups](redundant_backups.md)
 - [Best Practices for Data Storage](bpds.md)
+- [Download data](download_data.md)
