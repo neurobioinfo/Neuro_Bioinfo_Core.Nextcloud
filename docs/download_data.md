@@ -51,7 +51,7 @@ mkdir <destination folder name>
 
 ## 4. Run next comant to begin downloading
 ```
-rclone sync -v neurovip:remote/path/file <destination folder name> 2>&1|tee -a nexcloud_download.log
+rclone sync -v neurovip:/path/file <destination folder name> 2>&1|tee -a nexcloud_download.log
 ```
 
 ## Notes:
