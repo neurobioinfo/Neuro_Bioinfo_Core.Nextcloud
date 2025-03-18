@@ -56,7 +56,7 @@ rclone sync -v neurovip:/path/file <destination folder name> 2>&1|tee -a nexclou
 
 ## Notes:
 If downloading gets interrupted the same command will resume the download.
-The log file contains all all information about the download.
+The log file contains all information about the download.
 If you're on a Compute Canada server, you may want run this command within an "screen" created with the "screen" command.
 
 

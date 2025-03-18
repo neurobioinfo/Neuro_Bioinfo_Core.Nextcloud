@@ -1,5 +1,6 @@
 # Welcome to the Neuro_Bioinfo_Core Nextcloud Server Wiki!
 
+
 ## Neuro_Bioinfo_Core data storage platform
 As part of the NeuroVIP project, the Neuro Bioinfo Core group is offering a platform for all Neuro PIs who wish to store their data.  
 &nbsp;  
