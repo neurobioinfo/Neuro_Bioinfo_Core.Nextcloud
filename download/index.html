@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://neurobioinfo.github.io/upload_data/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://neurobioinfo.github.io/download/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Upload data - NeuroVIP</title>
+    <title>Download data - NeuroVIP</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Upload data";
-        var mkdocs_page_input_path = "upload_data.md";
-        var mkdocs_page_url = "/upload_data/";
+        var mkdocs_page_name = "Download data";
+        var mkdocs_page_input_path = "download.md";
+        var mkdocs_page_url = "/download/";
       </script>
     
     <!--[if lt IE 9]>
@@ -47,16 +47,22 @@
                 <li class="toctree-l1"><a class="reference internal" href="../getting_started/">Getting Started</a>
                 </li>
               </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../upload_data/">Upload data</a>
+                </li>
+              </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Upload data</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Download data</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#from-your-local-machine">From your local machine</a>
+    <li class="toctree-l2"><a class="reference internal" href="#1-if-youre-not-downloading-in-drac-clusters-install-rclone">1. If you're not downloading in DRAC clusters, install rclone:</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#from-digital-alliance-hpc">From Digital Alliance HPC:</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#_1"></a>
+    <li class="toctree-l2"><a class="reference internal" href="#2-setup-rclone-configuration-you-will-need-your-neurovip-user-name-and-your-password">2. Setup rclone configuration (you will need your NeuroVIP user name and your password)</a>
     </li>
-        </ul>
+    <li class="toctree-l2"><a class="reference internal" href="#3-go-to-your-download-folder-and-create-a-folder-that-will-receive-the-data">3. Go to your download folder and create a folder that will receive the data:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-run-next-command-to-begin-downloading">4. Run next command to begin downloading</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#notes">Notes:</a>
     </li>
     </ul>
                 </li>
@@ -83,7 +89,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Upload data</li>
+      <li class="breadcrumb-item active">Download data</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -92,66 +98,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="moving-data-onto-neuro_bioinfo_core-nextcloud-server">Moving Data onto Neuro_Bioinfo_Core Nextcloud Server</h1>
-<h2 id="from-your-local-machine">From your local machine</h2>
-<p>This option is most appropriate for smaller datasets, usually hosted on your local machine or an external drive</p>
-<ol>
-<li>
-<p>Log into <a href="https://neurobioinfo.github.io/Neuro_Bioinfo_Core.Nextcloud">the Neuro_Bioinfo_Core Nextcloud server</a> and click the "Files" icon on the top-left</p>
-</li>
-<li>
-<p>Navigate to your group's data folder (hint: name most likely will be "[PI's last name]Lab")</p>
-</li>
-<li>
-<p>Click on the "+" button and choose "Upload file"</p>
-<blockquote>
-<p>Create local folders as needed to organize your data</p>
-</blockquote>
-</li>
-</ol>
-<p><img alt="nextcloud howto2-optimized" src="https://github.com/neurobioinfo/Neuro_Bioinfo_Core.Nextcloud/assets/35270039/b06522fc-beb5-493a-9dd4-83e148de8919" /></p>
-<h2 id="from-digital-alliance-hpc">From Digital Alliance HPC:</h2>
-<p>This option is most appropriate for larger datasets, in particular those which are already stored on some HPC server hosted by the Digital Alliance</p>
-<ol>
-<li>Copy data to your group's sub-folder within /lustre04/scratch/spiegelm/Neuro_Bioinfo_Core.Nextcloud/transfer_tmp on beluga.computecanada.ca<blockquote>
-<p>Connect to beluga by your preferred method (filezilla, globus, terminal command-line, etc.)</p>
-<blockquote>
-<p>If a folder for your group doesn't already exist, please ask the Neuro Bioinfo Core to create it for you</p>
-</blockquote>
-</blockquote>
-</li>
-<li>you MUST set your linux permissions so the "other" user can read all files, and read + execute all folders you wish to upload. i.e. in your upload folder, run the following commands:</li>
-</ol>
-<pre><code>find -type f -exec chmod o+r {} \;
-find -type d -exec chmod o+rx {} \;
+                <h1 id="downloading-large-datasets">Downloading large datasets</h1>
+<p>To download a large dataset from our cloud you need to have installed the package "rclone". If you're downloading on DRAC clusters, rclone is already installed.</p>
+<p>Next steps will guide you in the downloading process using a command line:</p>
+<h2 id="1-if-youre-not-downloading-in-drac-clusters-install-rclone">1. If you're not downloading in DRAC clusters, install rclone:</h2>
+<pre><code>sudo apt  install rclone
 </code></pre>
-<ul>
-<li>don't worry, once they are on nextcloud, these permissions will no longer apply; it's just to manage the upload</li>
-</ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong><strong>Wait at least 6 hours before going to the next step. The data has to migrate behind the scenes</strong></strong></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong><strong>If you want to move in more than 5TB of data at a time, please contact neurobioinfo@mcgill.ca to co-ordinate before you begin</strong></strong></p>
-<ol>
-<li>
-<p>Log into <a href="https://neurobioinfo.github.io/Neuro_Bioinfo_Core.Nextcloud">the Neuro_Bioinfo_Core Nextcloud server</a> and click the "Files" icon on the top-left </p>
-</li>
-<li>
-<p>Navigate to your group's data folder (name will be something like "[PI's last name]Lab")</p>
-</li>
-<li>
-<p>If the transfer has completed successfully, all the folders you copied in step 1 should be there.</p>
-</li>
-<li>
-<p>If your data does not appear where it should<br />
-&nbsp;&nbsp;&nbsp;&nbsp;- <em>Try again in a few hours (especially if there is a large data transfer underway)</em><br />
-&nbsp;&nbsp;&nbsp;&nbsp;- <em>Contact the NeuroBioinfo Core at neurobioinfo@mcgill.ca for support</em></p>
-</li>
-</ol>
-<h3 id="_1"></h3>
+<h2 id="2-setup-rclone-configuration-you-will-need-your-neurovip-user-name-and-your-password">2. Setup rclone configuration (you will need your NeuroVIP user name and your password)</h2>
+<p>Run next command to setup rclone configuration. Make this whether you have a local installation of rclone, or if you are going to download on DRAC clusters.</p>
+<pre><code>rclone config
+</code></pre>
+<p>Chose or type next options for the different parameters:</p>
+<pre><code>Chose &quot;n&quot;  #for new remote
+
+Enter name for new remote --&gt; neurovip
+
+Type of storage to configure --&gt; &lt;number&gt; / WebDAV
+
+URL of http host to connect to --&gt; https://206-12-88-239.cloud.computecanada.ca/nextcloud/remote.php/dav/files/&lt;your NeuroVIP username&gt;
+
+Name of the WebDAV site/service/software you are using --&gt; &lt;number&gt; / Nextcloud
+
+User name --&gt; &lt;your NeuroVIP username&gt;
+
+chose &quot;y&quot; to enter password
+
+Password --&gt; &lt;your password&gt;
+
+Leave &quot;Option bearer_token&quot; empty
+
+choose &quot;no&quot; for &quot;Edit advanced config&quot;
+
+choose &quot;yes&quot; for &quot;Keep this 'nextcloud' remote&quot;
+
+choose &quot;q&quot; to quit config
+</code></pre>
+<h2 id="3-go-to-your-download-folder-and-create-a-folder-that-will-receive-the-data">3. Go to your download folder and create a folder that will receive the data:</h2>
+<pre><code>cd &lt;download folder&gt;
+mkdir &lt;destination folder name&gt;
+</code></pre>
+<h2 id="4-run-next-command-to-begin-downloading">4. Run next command to begin downloading</h2>
+<pre><code>rclone sync -v neurovip:/path/file &lt;destination folder name&gt; 2&gt;&amp;1|tee -a nexcloud_download.log
+</code></pre>
+<h2 id="notes">Notes:</h2>
+<p>If downloading gets interrupted the same command will resume the download.
+The log file contains all information about the download.
+If you're on a Compute Canada server, you may want run this command within an "screen" created with the "screen" command.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../getting_started/" class="btn btn-neutral float-left" title="Getting Started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../upload_data/" class="btn btn-neutral float-left" title="Upload data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../redundant_backups/" class="btn btn-neutral float-right" title="Redundant Backups">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -175,7 +172,7 @@ find -type d -exec chmod o+rx {} \;
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../getting_started/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../upload_data/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../redundant_backups/" style="color: #fcfcfc">Next &raquo;</a></span>
