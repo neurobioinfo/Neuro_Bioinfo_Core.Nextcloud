@@ -33,6 +33,6 @@ Please direct any questions, comments or general support requests to neurobioinf
 ## Contents
 - [Getting Started](getting_started.md)
 - [Upload data](upload_data.md)
-- [Download](download.md)
 - [Redundant Backups](redundant_backups.md)
 - [Best Practices for Data Storage](bpds.md)
+- [Download data](download_data.md)
