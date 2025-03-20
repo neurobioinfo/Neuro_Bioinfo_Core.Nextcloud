@@ -4,6 +4,7 @@ nav:
     - Home: index.md
     - Getting Started: getting_started.md
     - Upload data: upload_data.md
+    - Download: download_data.md
     - Redundant Backups: redundant_backups.md
     - Best Practices for Data Storage: bpds.md
 theme: readthedocs
