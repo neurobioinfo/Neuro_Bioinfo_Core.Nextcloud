@@ -17,8 +17,8 @@ This option is most appropriate for smaller datasets, usually hosted on your loc
 
 This option is most appropriate for larger datasets, in particular those which are already stored on some HPC server hosted by the Digital Alliance
 
-1. Copy data to your group's sub-folder within /lustre04/scratch/spiegelm/Neuro_Bioinfo_Core.Nextcloud/transfer_tmp on beluga.computecanada.ca
-> Connect to beluga by your preferred method (filezilla, globus, terminal command-line, etc.)
+1. Copy data to your group's sub-folder within /lustre09/project/6004655/COMMON/runs/georgia/Neuro_Bioinfo_Core.Nextcloud/transfer_tmp on rorqual.alliancecan.ca
+> Connect to Rorqual by your preferred method (filezilla, globus, terminal command-line, etc.)
 > > If a folder for your group doesn't already exist, please ask the Neuro Bioinfo Core to create it for you
 * you MUST set your linux permissions so the "other" user can read all files, and read + execute all folders you wish to upload. i.e. in your upload folder, run the following commands:
 ```
